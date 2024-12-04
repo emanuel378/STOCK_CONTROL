@@ -21,8 +21,9 @@ def cadastro():
     if st.button("Cadastrar"):
         if not nome.strip():
             st.error("Coloque seu nome!")
-        if not email=="@":
-            st.error("Coloque @ no seu emaill")
+        if "@gmail.com"not in email:
+            st.error("O e-mail deve conter o formato @gmail.com")
+       
         else:
             st.session_state.nome = nome
             st.session_state.email = email
